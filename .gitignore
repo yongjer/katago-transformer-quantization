@@ -1,0 +1,22 @@
+# Large / regenerable artifacts (see README "Reproduce")
+onnx/
+models/
+katago-src/
+selfplay/out/
+selfplay/models/
+calib/calib_1024.npz
+calib/ref19_eigen.txt
+calib/amax_dummy.npz
+calib/amax_1024.npz
+results/search/
+logs/plan_*/*.plan
+logs/plan_*/*.onnx
+logs/gtp_logs/
+logs/analysis_logs/
+logs/tools_build.log
+logs/eigen_build.log
+logs/selfplay.log
+logs/calib*.log
+logs/eigen_ref.log
+logs/*.err
+__pycache__/

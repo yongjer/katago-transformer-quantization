@@ -1,0 +1,93 @@
+: Version 92ee95c0a4b25fec214da00951ab69e97e207729-trt
+: Testing onnx/v_int8_noffn2.onnx
+: Testing on 19
+: Testing average errors between different GPU configurations...
+: For batch test, using batch size from nnMaxBatchSize in config: 8
+: Initializing nneval using current config...
+: nnRandSeed0 = 6042147276022566163
+: After dedups: nnModelFile0 = onnx/v_int8_noffn2.onnx useFP16 true
+: Initializing neural net buffer to be size 19 * 19 allowing smaller boards
+: TensorRT backend thread 1: Found GPU NVIDIA GeForce RTX 4060 Ti memory 16721248256 compute capability major 8 minor 9
+: TensorRT backend thread 1: Initializing (may take a long time)
+: TensorRT backend thread 0: Found GPU NVIDIA GeForce RTX 4060 Ti memory 16721248256 compute capability major 8 minor 9
+: TensorRT backend thread 0: Initializing (may take a long time)
+: TensorRT backend: building network from the ONNX graph in onnx/v_int8_noffn2.onnx
+: TensorRT backend: building network from the ONNX graph in onnx/v_int8_noffn2.onnx
+: TensorRT backend: pinned 322 layers to FP32 (rmsnorm + heads)
+: TensorRT backend: pinned 322 layers to FP32 (rmsnorm + heads)
+: Using existing timing cache at /home/yongjer/.katago/trtcache/trt-101601_gpu-a477c5a3_tune-9659330e080e_mx19x19_b8_fp16
+: Using existing timing cache at /home/yongjer/.katago/trtcache/trt-101601_gpu-a477c5a3_tune-9659330e080e_mx19x19_b8_fp16
+: TensorRT backend thread 1: Model version 17 useFP16 = true
+: TensorRT backend thread 1: Model name: kata1-tf3-b11c768-s12382M-d6533M (nbt transformer, 70442025 params)
+: TensorRT backend thread 0: Model version 17 useFP16 = true
+: TensorRT backend thread 0: Model name: kata1-tf3-b11c768-s12382M-d6533M (nbt transformer, 70442025 params)
+: Initializing nneval in fp32...
+: nnRandSeed0 = 12670202943354718506
+: After dedups: nnModelFile0 = onnx/v_int8_noffn2.onnx useFP16 true
+: Initializing neural net buffer to be size 19 * 19 allowing smaller boards
+: TensorRT backend thread 0: Found GPU NVIDIA GeForce RTX 4060 Ti memory 16721248256 compute capability major 8 minor 9
+: TensorRT backend thread 0: Initializing (may take a long time)
+: TensorRT backend: building network from the ONNX graph in onnx/v_int8_noffn2.onnx
+: TensorRT backend thread 1: Found GPU NVIDIA GeForce RTX 4060 Ti memory 16721248256 compute capability major 8 minor 9
+: TensorRT backend thread 1: Initializing (may take a long time)
+: TensorRT backend: building network from the ONNX graph in onnx/v_int8_noffn2.onnx
+: TensorRT backend: pinned 322 layers to FP32 (rmsnorm + heads)
+: TensorRT backend: pinned 322 layers to FP32 (rmsnorm + heads)
+: Using existing timing cache at /home/yongjer/.katago/trtcache/trt-101601_gpu-a477c5a3_tune-9659330e080e_mx19x19_b8_fp32
+: Using existing timing cache at /home/yongjer/.katago/trtcache/trt-101601_gpu-a477c5a3_tune-9659330e080e_mx19x19_b8_fp32
+: TensorRT backend thread 0: Model version 17 useFP16 = false
+: TensorRT backend thread 0: Model name: kata1-tf3-b11c768-s12382M-d6533M (nbt transformer, 70442025 params)
+: TensorRT backend thread 1: Model version 17 useFP16 = false
+: TensorRT backend thread 1: Model name: kata1-tf3-b11c768-s12382M-d6533M (nbt transformer, 70442025 params)
+: Loaded reference values for 2247 positions from: calib/ref19_eigen.txt
+: Beginning evaluations! These may take a long time on pure CPU, or on a weak GPU, but on a decent GPU shouldn't take too long.
+: Running evaluations in fp32
+: Running batched evaluations in fp32
+: Running evaluations using current config
+: Running batched evaluations using current config
+: Computed stats on 2247 positions
+: Reporting the average, 90%, 99%, and max abs error between the following configurations: 
+: fp32 error vs reference winrateError:                        2.39928%  6.39870%  12.02296%  24.18339%
+: fp32 error vs reference leadError:                           0.42246   0.81336   2.93118   14.37826
+: fp32 error vs reference scoreMeanError:                      0.56990   1.18317   3.58403   15.89742
+: fp32 error vs reference scoreStdevError:                     0.37795   0.68195   1.47919   7.21878
+: fp32 error vs reference topPolicyDelta:                      2.86073%  6.71365%  13.75575%  31.11039%
+: fp32 error vs reference policyKLDiv:                         0.013456  0.031877  0.068167  0.200560
+: fp32 error vs reference stWLErrorError:                      0.91113c  2.20932c  6.17405c  19.97325c
+: fp32 error vs reference stScErrorError:                      0.08984   0.16122   0.96089   8.97698
+: fp32 error vs reference ownershipError:                      1.05735c  2.54752c  7.26322c  56.46531c
+: fp32 error vs reference closest margin:                      114x of limit (policyKLDiv 99%), 167x of limit (policyKLDiv max)
+: batched fp32 error vs reference winrateError:                2.39928%  6.39870%  12.02296%  24.18339%
+: batched fp32 error vs reference leadError:                   0.42246   0.81336   2.93118   14.37826
+: batched fp32 error vs reference scoreMeanError:              0.56990   1.18317   3.58403   15.89742
+: batched fp32 error vs reference scoreStdevError:             0.37795   0.68195   1.47919   7.21878
+: batched fp32 error vs reference topPolicyDelta:              2.86073%  6.71365%  13.75575%  31.11039%
+: batched fp32 error vs reference policyKLDiv:                 0.013456  0.031877  0.068167  0.200560
+: batched fp32 error vs reference stWLErrorError:              0.91113c  2.20932c  6.17405c  19.97325c
+: batched fp32 error vs reference stScErrorError:              0.08984   0.16122   0.96089   8.97698
+: batched fp32 error vs reference ownershipError:              1.05735c  2.54752c  7.26322c  56.46531c
+: batched fp32 error vs reference closest margin:              114x of limit (policyKLDiv 99%), 167x of limit (policyKLDiv max)
+: current cfg error vs reference winrateError:                 3.27168%  8.82626%  15.81153%  23.06437%
+: current cfg error vs reference leadError:                    0.48027   0.89952   2.96829   17.05996
+: current cfg error vs reference scoreMeanError:               0.71171   1.41817   3.22721   19.26788
+: current cfg error vs reference scoreStdevError:              0.39560   0.74276   1.65010   8.17518
+: current cfg error vs reference topPolicyDelta:               2.84591%  6.56629%  12.45626%  27.49657%
+: current cfg error vs reference policyKLDiv:                  0.013596  0.032228  0.069781  0.181966
+: current cfg error vs reference stWLErrorError:               1.08766c  2.57216c  6.94843c  19.26549c
+: current cfg error vs reference stScErrorError:               0.10082   0.18023   0.90235   10.76865
+: current cfg error vs reference ownershipError:               1.05951c  2.55694c  7.25078c  73.52425c
+: current cfg error vs reference closest margin:               34.9x of limit (policyKLDiv 99%), 45.5x of limit (policyKLDiv max)
+: batched current cfg error vs reference winrateError:         3.27168%  8.82626%  15.81153%  23.06437%
+: batched current cfg error vs reference leadError:            0.48027   0.89952   2.96829   17.05996
+: batched current cfg error vs reference scoreMeanError:       0.71171   1.41817   3.22721   19.26788
+: batched current cfg error vs reference scoreStdevError:      0.39560   0.74276   1.65010   8.17518
+: batched current cfg error vs reference topPolicyDelta:       2.84591%  6.56629%  12.45626%  27.49657%
+: batched current cfg error vs reference policyKLDiv:          0.013596  0.032228  0.069781  0.181966
+: batched current cfg error vs reference stWLErrorError:       1.08766c  2.57216c  6.94843c  19.26549c
+: batched current cfg error vs reference stScErrorError:       0.10082   0.18023   0.90235   10.76865
+: batched current cfg error vs reference ownershipError:       1.05951c  2.55694c  7.25078c  73.52425c
+: batched current cfg error vs reference closest margin:       34.9x of limit (policyKLDiv 99%), 45.5x of limit (policyKLDiv max)
+: GPU 0 finishing, processed 2449 rows 1759 batches
+: GPU 0 finishing, processed 2045 rows 1352 batches
+: GPU 0 finishing, processed 2653 rows 1954 batches
+: GPU 0 finishing, processed 1841 rows 1145 batches

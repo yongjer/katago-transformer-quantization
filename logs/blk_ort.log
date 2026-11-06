@@ -1,0 +1,12 @@
+held-out positions: 96
+b0.onnx                         winrateErr avg 0.598% p99 3.517%  policyKL avg 0.000252 p99 0.003134  top1 agree 99.0%  scoreRawErr avg 0.0019
+b1.onnx                         winrateErr avg 0.517% p99 2.001%  policyKL avg 0.000128 p99 0.001103  top1 agree 100.0%  scoreRawErr avg 0.0019
+b2.onnx                         winrateErr avg 0.234% p99 1.369%  policyKL avg 0.000143 p99 0.001088  top1 agree 99.0%  scoreRawErr avg 0.0008
+b3.onnx                         winrateErr avg 0.388% p99 3.112%  policyKL avg 0.000253 p99 0.001673  top1 agree 99.0%  scoreRawErr avg 0.0013
+b4.onnx                         winrateErr avg 0.497% p99 2.883%  policyKL avg 0.000612 p99 0.003963  top1 agree 100.0%  scoreRawErr avg 0.0018
+b5.onnx                         winrateErr avg 0.281% p99 1.235%  policyKL avg 0.000221 p99 0.001663  top1 agree 100.0%  scoreRawErr avg 0.0011
+b6.onnx                         winrateErr avg 0.391% p99 1.931%  policyKL avg 0.000435 p99 0.003503  top1 agree 97.9%  scoreRawErr avg 0.0013
+b7.onnx                         winrateErr avg 0.301% p99 1.809%  policyKL avg 0.000361 p99 0.004008  top1 agree 100.0%  scoreRawErr avg 0.0009
+b8.onnx                         winrateErr avg 0.281% p99 1.559%  policyKL avg 0.000237 p99 0.001404  top1 agree 97.9%  scoreRawErr avg 0.0011
+b9.onnx                         winrateErr avg 0.470% p99 3.620%  policyKL avg 0.000140 p99 0.001021  top1 agree 100.0%  scoreRawErr avg 0.0015
+b10.onnx                        winrateErr avg 0.167% p99 0.814%  policyKL avg 0.000271 p99 0.001270  top1 agree 99.0%  scoreRawErr avg 0.0009

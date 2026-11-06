@@ -1,0 +1,13 @@
+tf3_fp32 batch=4 601.65279 nnEval/s
+tf3_fp32 batch=8 617.70375 nnEval/s
+v_fp8_all batch=4 745.18283 nnEval/s
+v_fp8_all batch=8 747.22857 nnEval/s
+v_int8_all batch=4 849.59966 nnEval/s
+v_int8_all batch=8 872.17139 nnEval/s
+v_int8_ffn2fp8 batch=4 what():  TensorRT backend: failed to create plan
+v_int8_ffn2fp8 batch=8 what():  TensorRT backend: failed to create plan
+v_int8_noffn2 batch=4 751.22856 nnEval/s
+v_int8_noffn2 batch=8 764.13255 nnEval/s
+tf3_fp32 batch=8 435.74879 nnEval/s
+sq/int8_nonbt_a0.8 batch=8 633.52206 nnEval/s
+sq/int8_all_a0.8 batch=8 900.89558 nnEval/s

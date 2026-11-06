@@ -1,0 +1,93 @@
+: Version 92ee95c0a4b25fec214da00951ab69e97e207729-trt
+: Testing onnx/sq/int8_nonbt_a0.8.onnx
+: Testing on 19
+: Testing average errors between different GPU configurations...
+: For batch test, using batch size from nnMaxBatchSize in config: 8
+: Initializing nneval using current config...
+: nnRandSeed0 = 4267956834248242397
+: After dedups: nnModelFile0 = onnx/sq/int8_nonbt_a0.8.onnx useFP16 true
+: Initializing neural net buffer to be size 19 * 19 allowing smaller boards
+: TensorRT backend thread 0: Found GPU NVIDIA GeForce RTX 4060 Ti memory 16721248256 compute capability major 8 minor 9
+: TensorRT backend thread 0: Initializing (may take a long time)
+: TensorRT backend thread 1: Found GPU NVIDIA GeForce RTX 4060 Ti memory 16721248256 compute capability major 8 minor 9
+: TensorRT backend thread 1: Initializing (may take a long time)
+: TensorRT backend: building network from the ONNX graph in onnx/sq/int8_nonbt_a0.8.onnx
+: TensorRT backend: building network from the ONNX graph in onnx/sq/int8_nonbt_a0.8.onnx
+: TensorRT backend: pinned 322 layers to FP32 (rmsnorm + heads)
+: TensorRT backend: pinned 322 layers to FP32 (rmsnorm + heads)
+: Using existing timing cache at /home/yongjer/.katago/trtcache/trt-101601_gpu-a477c5a3_tune-9659330e080e_mx19x19_b8_fp16
+: Using existing timing cache at /home/yongjer/.katago/trtcache/trt-101601_gpu-a477c5a3_tune-9659330e080e_mx19x19_b8_fp16
+: TensorRT backend thread 1: Model version 17 useFP16 = true
+: TensorRT backend thread 1: Model name: kata1-tf3-b11c768-s12382M-d6533M (nbt transformer, 70442025 params)
+: TensorRT backend thread 0: Model version 17 useFP16 = true
+: TensorRT backend thread 0: Model name: kata1-tf3-b11c768-s12382M-d6533M (nbt transformer, 70442025 params)
+: Initializing nneval in fp32...
+: nnRandSeed0 = 945131509524412760
+: After dedups: nnModelFile0 = onnx/sq/int8_nonbt_a0.8.onnx useFP16 true
+: Initializing neural net buffer to be size 19 * 19 allowing smaller boards
+: TensorRT backend thread 1: Found GPU NVIDIA GeForce RTX 4060 Ti memory 16721248256 compute capability major 8 minor 9
+: TensorRT backend thread 1: Initializing (may take a long time)
+: TensorRT backend thread 0: Found GPU NVIDIA GeForce RTX 4060 Ti memory 16721248256 compute capability major 8 minor 9
+: TensorRT backend thread 0: Initializing (may take a long time)
+: TensorRT backend: building network from the ONNX graph in onnx/sq/int8_nonbt_a0.8.onnx
+: TensorRT backend: building network from the ONNX graph in onnx/sq/int8_nonbt_a0.8.onnx
+: TensorRT backend: pinned 322 layers to FP32 (rmsnorm + heads)
+: Using existing timing cache at /home/yongjer/.katago/trtcache/trt-101601_gpu-a477c5a3_tune-9659330e080e_mx19x19_b8_fp32
+: TensorRT backend: pinned 322 layers to FP32 (rmsnorm + heads)
+: Using existing timing cache at /home/yongjer/.katago/trtcache/trt-101601_gpu-a477c5a3_tune-9659330e080e_mx19x19_b8_fp32
+: TensorRT backend thread 1: Model version 17 useFP16 = false
+: TensorRT backend thread 1: Model name: kata1-tf3-b11c768-s12382M-d6533M (nbt transformer, 70442025 params)
+: TensorRT backend thread 0: Model version 17 useFP16 = false
+: TensorRT backend thread 0: Model name: kata1-tf3-b11c768-s12382M-d6533M (nbt transformer, 70442025 params)
+: Loaded reference values for 2247 positions from: calib/ref19_eigen.txt
+: Beginning evaluations! These may take a long time on pure CPU, or on a weak GPU, but on a decent GPU shouldn't take too long.
+: Running evaluations in fp32
+: Running batched evaluations in fp32
+: Running evaluations using current config
+: Running batched evaluations using current config
+: Computed stats on 2247 positions
+: Reporting the average, 90%, 99%, and max abs error between the following configurations: 
+: fp32 error vs reference winrateError:                        1.71992%  4.38647%  7.67983%  14.45728%
+: fp32 error vs reference leadError:                           0.26070   0.52103   1.49826   6.10551
+: fp32 error vs reference scoreMeanError:                      0.36239   0.73945   1.77616   7.67041
+: fp32 error vs reference scoreStdevError:                     0.10328   0.21473   0.63813   3.47650
+: fp32 error vs reference topPolicyDelta:                      1.52379%  3.65830%  7.54408%  17.75310%
+: fp32 error vs reference policyKLDiv:                         0.004706  0.010872  0.025780  0.079855
+: fp32 error vs reference stWLErrorError:                      0.50551c  1.22817c  3.18242c  17.91358c
+: fp32 error vs reference stScErrorError:                      0.04766   0.10003   0.46256   2.60618
+: fp32 error vs reference ownershipError:                      0.66633c  1.61593c  4.57473c  41.43806c
+: fp32 error vs reference closest margin:                      43x of limit (policyKLDiv 99%), 66.5x of limit (policyKLDiv max)
+: batched fp32 error vs reference winrateError:                1.71992%  4.38647%  7.67983%  14.45728%
+: batched fp32 error vs reference leadError:                   0.26070   0.52103   1.49826   6.10551
+: batched fp32 error vs reference scoreMeanError:              0.36239   0.73945   1.77616   7.67041
+: batched fp32 error vs reference scoreStdevError:             0.10328   0.21473   0.63813   3.47650
+: batched fp32 error vs reference topPolicyDelta:              1.52379%  3.65830%  7.54408%  17.75310%
+: batched fp32 error vs reference policyKLDiv:                 0.004706  0.010872  0.025780  0.079855
+: batched fp32 error vs reference stWLErrorError:              0.50551c  1.22817c  3.18242c  17.91358c
+: batched fp32 error vs reference stScErrorError:              0.04766   0.10003   0.46256   2.60618
+: batched fp32 error vs reference ownershipError:              0.66633c  1.61593c  4.57473c  41.43806c
+: batched fp32 error vs reference closest margin:              43x of limit (policyKLDiv 99%), 66.5x of limit (policyKLDiv max)
+: current cfg error vs reference winrateError:                 1.56480%  3.92409%  6.74025%  12.86590%
+: current cfg error vs reference leadError:                    0.25942   0.54056   1.54772   4.32184
+: current cfg error vs reference scoreMeanError:               0.33884   0.68284   1.60256   5.51014
+: current cfg error vs reference scoreStdevError:              0.10333   0.22088   0.58655   1.63398
+: current cfg error vs reference topPolicyDelta:               1.62040%  3.90177%  7.64410%  35.45756%
+: current cfg error vs reference policyKLDiv:                  0.005155  0.012174  0.027572  0.278530
+: current cfg error vs reference stWLErrorError:               0.50578c  1.26601c  3.65751c  11.36282c
+: current cfg error vs reference stScErrorError:               0.04667   0.09899   0.44486   1.56212
+: current cfg error vs reference ownershipError:               0.67730c  1.65145c  4.55245c  63.86296c
+: current cfg error vs reference closest margin:               13.8x of limit (policyKLDiv 99%), 69.6x of limit (policyKLDiv max)
+: batched current cfg error vs reference winrateError:         1.56480%  3.92409%  6.74025%  12.86590%
+: batched current cfg error vs reference leadError:            0.25942   0.54056   1.54772   4.32184
+: batched current cfg error vs reference scoreMeanError:       0.33884   0.68284   1.60256   5.51014
+: batched current cfg error vs reference scoreStdevError:      0.10333   0.22088   0.58655   1.63398
+: batched current cfg error vs reference topPolicyDelta:       1.62040%  3.90177%  7.64410%  35.45756%
+: batched current cfg error vs reference policyKLDiv:          0.005155  0.012174  0.027572  0.278530
+: batched current cfg error vs reference stWLErrorError:       0.50578c  1.26601c  3.65751c  11.36282c
+: batched current cfg error vs reference stScErrorError:       0.04667   0.09899   0.44486   1.56212
+: batched current cfg error vs reference ownershipError:       0.67730c  1.65145c  4.55245c  63.86296c
+: batched current cfg error vs reference closest margin:       13.8x of limit (policyKLDiv 99%), 69.6x of limit (policyKLDiv max)
+: GPU 0 finishing, processed 2798 rows 2106 batches
+: GPU 0 finishing, processed 1696 rows 1006 batches
+: GPU 0 finishing, processed 2996 rows 2296 batches
+: GPU 0 finishing, processed 1498 rows 802 batches

@@ -1,0 +1,5 @@
+pair                            n top-move agree |dWR| mean |dWR| p95 |dLead| mean
+fp16_a vs fp16_b              200          87.0%     0.224%    1.001%        0.092
+fp16_a vs int8_all            200          85.5%     0.515%    2.683%        0.191
+fp16_a vs int8_nonbt          200          88.5%     0.384%    1.857%        0.188
+fp16_a vs fp8_all             200          81.5%     0.706%    3.178%        0.252

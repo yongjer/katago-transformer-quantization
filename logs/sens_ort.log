@@ -1,0 +1,15 @@
+held-out positions: 96
+fp8_a_only.onnx                winrateErr avg 3.439% p99 18.236%  policyKL avg 0.007041 p99 0.045923  top1 agree 93.8%  scoreRawErr avg 0.0120
+fp8_only_ffn_linear1.onnx      winrateErr avg 0.855% p99 4.737%  policyKL avg 0.001098 p99 0.006505  top1 agree 99.0%  scoreRawErr avg 0.0031
+fp8_only_ffn_linear2.onnx      winrateErr avg 0.438% p99 1.864%  policyKL avg 0.000431 p99 0.002924  top1 agree 99.0%  scoreRawErr avg 0.0017
+fp8_only_normactconv.onnx      winrateErr avg 2.776% p99 15.661%  policyKL avg 0.005963 p99 0.065917  top1 agree 97.9%  scoreRawErr avg 0.0084
+fp8_only_out_proj.onnx         winrateErr avg 1.070% p99 5.141%  policyKL avg 0.001463 p99 0.011499  top1 agree 99.0%  scoreRawErr avg 0.0042
+fp8_only_q_proj.onnx           winrateErr avg 3.001% p99 21.901%  policyKL avg 0.004886 p99 0.037699  top1 agree 99.0%  scoreRawErr avg 0.0093
+fp8_w_only.onnx                winrateErr avg 2.412% p99 13.876%  policyKL avg 0.005696 p99 0.060673  top1 agree 97.9%  scoreRawErr avg 0.0082
+int8_a_only.onnx               winrateErr avg 4.255% p99 19.039%  policyKL avg 0.011610 p99 0.118098  top1 agree 96.9%  scoreRawErr avg 0.0136
+int8_only_ffn_linear1.onnx     winrateErr avg 0.362% p99 2.474%  policyKL avg 0.000347 p99 0.003325  top1 agree 97.9%  scoreRawErr avg 0.0015
+int8_only_ffn_linear2.onnx     winrateErr avg 19.418% p99 75.118%  policyKL avg 0.217353 p99 1.878311  top1 agree 82.3%  scoreRawErr avg 0.0926
+int8_only_normactconv.onnx     winrateErr avg 3.728% p99 13.972%  policyKL avg 0.010867 p99 0.093781  top1 agree 95.8%  scoreRawErr avg 0.0119
+int8_only_out_proj.onnx        winrateErr avg 1.048% p99 6.093%  policyKL avg 0.000631 p99 0.004935  top1 agree 99.0%  scoreRawErr avg 0.0036
+int8_only_q_proj.onnx          winrateErr avg 0.786% p99 3.576%  policyKL avg 0.000866 p99 0.006320  top1 agree 100.0%  scoreRawErr avg 0.0033
+int8_w_only.onnx               winrateErr avg 0.648% p99 3.933%  policyKL avg 0.000567 p99 0.005274  top1 agree 99.0%  scoreRawErr avg 0.0025

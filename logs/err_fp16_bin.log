@@ -1,0 +1,98 @@
+: Version 92ee95c0a4b25fec214da00951ab69e97e207729-trt
+: Testing /home/yongjer/下載/katago-v1.18.1-trt10.16.1-cuda13.2-linux-x64/models/kata1-tf3-b11c768-s12382M-d6533M.bin.gz
+: Testing on 19
+: Testing average errors between different GPU configurations...
+: For batch test, using batch size from nnMaxBatchSize in config: 8
+: Initializing nneval using current config...
+: nnRandSeed0 = 18274943226125927090
+: After dedups: nnModelFile0 = /home/yongjer/下載/katago-v1.18.1-trt10.16.1-cuda13.2-linux-x64/models/kata1-tf3-b11c768-s12382M-d6533M.bin.gz useFP16 true
+: Initializing neural net buffer to be size 19 * 19 allowing smaller boards
+: TensorRT backend thread 0: Found GPU NVIDIA GeForce RTX 4060 Ti memory 16721248256 compute capability major 8 minor 9
+: TensorRT backend thread 0: Initializing (may take a long time)
+: TensorRT backend thread 1: Found GPU NVIDIA GeForce RTX 4060 Ti memory 16721248256 compute capability major 8 minor 9
+: TensorRT backend thread 1: Initializing (may take a long time)
+: TensorRT backend: building network via ONNX emitter
+: TensorRT backend: building network via ONNX emitter
+: Building internal onnx model, requireExactNNLen=false transformerNHWC=true
+: Building internal onnx model, requireExactNNLen=false transformerNHWC=true
+: TensorRT backend: pinned 322 layers to FP32 (rmsnorm + heads)
+: Using existing timing cache at /home/yongjer/.katago/trtcache/trt-101601_gpu-a477c5a3_tune-9659330e080e_mx19x19_b8_fp16
+: TensorRT backend: pinned 322 layers to FP32 (rmsnorm + heads)
+: Using existing timing cache at /home/yongjer/.katago/trtcache/trt-101601_gpu-a477c5a3_tune-9659330e080e_mx19x19_b8_fp16
+: TensorRT backend thread 0: Model version 17 useFP16 = true
+: TensorRT backend thread 0: Model name: kata1-tf3-b11c768-s12382M-d6533M (nbt transformer, 70442025 params)
+: TensorRT backend thread 1: Model version 17 useFP16 = true
+: TensorRT backend thread 1: Model name: kata1-tf3-b11c768-s12382M-d6533M (nbt transformer, 70442025 params)
+: Initializing nneval in fp32...
+: nnRandSeed0 = 13370893321103671475
+: After dedups: nnModelFile0 = /home/yongjer/下載/katago-v1.18.1-trt10.16.1-cuda13.2-linux-x64/models/kata1-tf3-b11c768-s12382M-d6533M.bin.gz useFP16 true
+: Initializing neural net buffer to be size 19 * 19 allowing smaller boards
+: TensorRT backend thread 1: Found GPU NVIDIA GeForce RTX 4060 Ti memory 16721248256 compute capability major 8 minor 9
+: TensorRT backend thread 1: Initializing (may take a long time)
+: TensorRT backend: building network via ONNX emitter
+: Building internal onnx model, requireExactNNLen=false transformerNHWC=true
+: TensorRT backend thread 0: Found GPU NVIDIA GeForce RTX 4060 Ti memory 16721248256 compute capability major 8 minor 9
+: TensorRT backend thread 0: Initializing (may take a long time)
+: TensorRT backend: building network via ONNX emitter
+: Building internal onnx model, requireExactNNLen=false transformerNHWC=true
+: TensorRT backend: pinned 322 layers to FP32 (rmsnorm + heads)
+: Creating new timing cache (usingFP16=false 19x19 maxBatchSizeLimit=8)
+: TensorRT backend: pinned 322 layers to FP32 (rmsnorm + heads)
+: Saved new timing cache to /home/yongjer/.katago/trtcache/trt-101601_gpu-a477c5a3_tune-9659330e080e_mx19x19_b8_fp32
+: Using existing timing cache at /home/yongjer/.katago/trtcache/trt-101601_gpu-a477c5a3_tune-9659330e080e_mx19x19_b8_fp32
+: TensorRT backend thread 0: Model version 17 useFP16 = false
+: TensorRT backend thread 0: Model name: kata1-tf3-b11c768-s12382M-d6533M (nbt transformer, 70442025 params)
+: TensorRT backend thread 1: Model version 17 useFP16 = false
+: TensorRT backend thread 1: Model name: kata1-tf3-b11c768-s12382M-d6533M (nbt transformer, 70442025 params)
+: Loaded reference values for 2247 positions from: calib/ref19_eigen.txt
+: Beginning evaluations! These may take a long time on pure CPU, or on a weak GPU, but on a decent GPU shouldn't take too long.
+: Running evaluations in fp32
+: Running batched evaluations in fp32
+: Running evaluations using current config
+: Running batched evaluations using current config
+: Computed stats on 2247 positions
+: Reporting the average, 90%, 99%, and max abs error between the following configurations: 
+: fp32 error vs reference winrateError:                        0.03531%  0.09039%  0.14719%  0.24184%
+: fp32 error vs reference leadError:                           0.00480   0.00912   0.03249   0.13556
+: fp32 error vs reference scoreMeanError:                      0.00693   0.01334   0.03189   0.14578
+: fp32 error vs reference scoreStdevError:                     0.00207   0.00438   0.01066   0.05665
+: fp32 error vs reference topPolicyDelta:                      0.02635%  0.06380%  0.11919%  0.29315%
+: fp32 error vs reference policyKLDiv:                         0.000001  0.000003  0.000007  0.000019
+: fp32 error vs reference stWLErrorError:                      0.00980c  0.02191c  0.07621c  0.15762c
+: fp32 error vs reference stScErrorError:                      0.00093   0.00201   0.00872   0.03728
+: fp32 error vs reference ownershipError:                      0.01111c  0.02661c  0.07654c  0.97487c
+: fp32 error vs reference closest margin:                      0.327x of limit (winrateError 99%), 0.217x of limit (topPolicyDelta max)
+: batched fp32 error vs reference winrateError:                0.03531%  0.09039%  0.14719%  0.24184%
+: batched fp32 error vs reference leadError:                   0.00480   0.00912   0.03249   0.13556
+: batched fp32 error vs reference scoreMeanError:              0.00693   0.01334   0.03189   0.14578
+: batched fp32 error vs reference scoreStdevError:             0.00207   0.00438   0.01066   0.05665
+: batched fp32 error vs reference topPolicyDelta:              0.02635%  0.06380%  0.11919%  0.29315%
+: batched fp32 error vs reference policyKLDiv:                 0.000001  0.000003  0.000007  0.000019
+: batched fp32 error vs reference stWLErrorError:              0.00980c  0.02191c  0.07621c  0.15762c
+: batched fp32 error vs reference stScErrorError:              0.00093   0.00201   0.00872   0.03728
+: batched fp32 error vs reference ownershipError:              0.01111c  0.02661c  0.07654c  0.97487c
+: batched fp32 error vs reference closest margin:              0.327x of limit (winrateError 99%), 0.217x of limit (topPolicyDelta max)
+: current cfg error vs reference winrateError:                 0.15587%  0.42247%  0.75151%  1.24681%
+: current cfg error vs reference leadError:                    0.02359   0.04690   0.13878   0.68867
+: current cfg error vs reference scoreMeanError:               0.03126   0.06658   0.14444   0.78954
+: current cfg error vs reference scoreStdevError:              0.00740   0.01567   0.05075   0.24440
+: current cfg error vs reference topPolicyDelta:               0.11515%  0.27436%  0.53549%  0.90447%
+: current cfg error vs reference policyKLDiv:                  0.000027  0.000065  0.000156  0.000328
+: current cfg error vs reference stWLErrorError:               0.04128c  0.10896c  0.28365c  0.64283c
+: current cfg error vs reference stScErrorError:               0.00346   0.00735   0.03542   0.17486
+: current cfg error vs reference ownershipError:               0.04978c  0.12006c  0.34238c  2.31919c
+: current cfg error vs reference closest margin:               0.376x of limit (winrateError 99%), 0.263x of limit (scoreMeanError max)
+: batched current cfg error vs reference winrateError:         0.15587%  0.42247%  0.75151%  1.24681%
+: batched current cfg error vs reference leadError:            0.02359   0.04690   0.13878   0.68867
+: batched current cfg error vs reference scoreMeanError:       0.03126   0.06658   0.14444   0.78954
+: batched current cfg error vs reference scoreStdevError:      0.00740   0.01567   0.05075   0.24440
+: batched current cfg error vs reference topPolicyDelta:       0.11515%  0.27436%  0.53549%  0.90447%
+: batched current cfg error vs reference policyKLDiv:          0.000027  0.000065  0.000156  0.000328
+: batched current cfg error vs reference stWLErrorError:       0.04128c  0.10896c  0.28365c  0.64283c
+: batched current cfg error vs reference stScErrorError:       0.00346   0.00735   0.03542   0.17486
+: batched current cfg error vs reference ownershipError:       0.04978c  0.12006c  0.34238c  2.31919c
+: batched current cfg error vs reference closest margin:       0.376x of limit (winrateError 99%), 0.263x of limit (scoreMeanError max)
+: GPU 0 finishing, processed 2758 rows 2061 batches
+: GPU 0 finishing, processed 1736 rows 1039 batches
+: GPU 0 finishing, processed 2527 rows 1828 batches
+: GPU 0 finishing, processed 1967 rows 1265 batches

@@ -1,0 +1,69 @@
+
+==========
+== CUDA ==
+==========
+
+CUDA Version 13.2.1
+
+Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+
+engine=logs/plan_fp16/plan_19x19_fp16_max.plan batch=8 wall=12.659 ms/batch (632.0 eval/s)  profiled-sum=13.206 ms
+    10.058 ms   76.2%  n= 195  GEMM fp16/fp32
+     2.514 ms   19.0%  n= 319  reshape/cast/transpose
+     0.589 ms    4.5%  n=  79  other elementwise (silu, rope, residual, q/dq...)
+     0.027 ms    0.2%  n=   4  conv/heads
+     0.018 ms    0.1%  n=   3  RMSNorm
+  top layers:
+      0.135 ms  sm80_xmma_gemm_f16f16_f16f16_f16_tn_n_tilesize128x128x32_sta model.blocks.8.blockstack.5.ffn_linear_gate/nhwc+model.blocks.8.blockstack.5.ffn_linear1/n
+      0.114 ms  sm80_xmma_gemm_f16f16_f16f16_f16_tn_n_tilesize128x128x32_sta model.blocks.6.blockstack.5.ffn_linear_gate/nhwc+model.blocks.6.blockstack.5.ffn_linear1/n
+      0.112 ms  sm80_xmma_gemm_f16f16_f16f16_f16_tn_n_tilesize128x128x32_sta model.blocks.3.blockstack.3.ffn_linear_gate/nhwc+model.blocks.3.blockstack.3.ffn_linear1/n
+      0.099 ms  sm80_xmma_gemm_f32f32_tf32f32_f32_nn_n_tilesize64x128x16_sta model.value_head.conv1 + model.value_head.bias1.scale + model.value_head.bias1/scale + mod
+      0.097 ms  sm80_xmma_gemm_f16f16_f16f16_f16_tn_n_tilesize64x128x32_stag model.blocks.5.blockstack.1.ffn_linear2/nhwc_myl8_264
+      0.096 ms  ampere_h16816gemm_128x64_ldg8_tn_v1                          model.blocks.7.blockstack.0.v_proj/nhwc+model.blocks.7.blockstack.0.k_proj/nhwc+model.bloc
+      0.095 ms  sm80_xmma_gemm_f16f16_f16f16_f16_tn_n_tilesize128x128x32_sta model.blocks.5.blockstack.1.ffn_linear_gate/nhwc+model.blocks.5.blockstack.1.ffn_linear1/n
+      0.090 ms  sm80_xmma_gemm_f16f16_f16f16_f16_tn_n_tilesize128x128x32_sta model.blocks.9.blockstack.1.ffn_linear_gate/nhwc+model.blocks.9.blockstack.1.ffn_linear1/n
+      0.088 ms  sm80_xmma_gemm_f16f16_f16f16_f16_tn_n_tilesize128x128x32_sta model.blocks.0.blockstack.1.ffn_linear_gate/nhwc+model.blocks.0.blockstack.1.ffn_linear1/n
+      0.088 ms  sm80_xmma_gemm_f16f16_f16f16_f16_tn_n_tilesize128x128x32_sta model.blocks.5.blockstack.3.ffn_linear_gate/nhwc+model.blocks.5.blockstack.3.ffn_linear1/n
+      0.087 ms  sm80_xmma_gemm_f16f16_f16f16_f16_tn_n_tilesize128x128x32_sta model.blocks.7.blockstack.1.ffn_linear_gate/nhwc+model.blocks.7.blockstack.1.ffn_linear1/n
+      0.087 ms  sm80_xmma_gemm_f16f16_f16f16_f16_tn_n_tilesize128x128x32_sta model.blocks.3.blockstack.1.ffn_linear_gate/nhwc+model.blocks.3.blockstack.1.ffn_linear1/n
+
+==========
+== CUDA ==
+==========
+
+CUDA Version 13.2.1
+
+Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+
+engine=logs/plan_fp8/plan_19x19_fp16_max.plan batch=8 wall=11.115 ms/batch (719.7 eval/s)  profiled-sum=11.540 ms
+     5.944 ms   51.5%  n= 187  GEMM fp8
+     2.349 ms   20.4%  n=  41  GEMM fp16/fp32
+     1.939 ms   16.8%  n= 287  reshape/cast/transpose
+     1.263 ms   10.9%  n= 145  other elementwise (silu, rope, residual, q/dq...)
+     0.028 ms    0.2%  n=   4  conv/heads
+     0.018 ms    0.2%  n=   3  RMSNorm
+  top layers:
+      0.099 ms  sm80_xmma_gemm_f32f32_tf32f32_f32_nn_n_tilesize64x128x16_sta model.value_head.conv1 + model.value_head.bias1.scale + model.value_head.bias1/scale + mod
+      0.084 ms  _gemm_mha_v2_0x255d60df2b7df3ff3753362954696d0e              _gemm_mha_v2_myl8_433
+      0.067 ms  _gemm_mha_v2_0x255d60df2b7df3ff3753362954696d0e              _gemm_mha_v2_myl8_14
+      0.067 ms  _gemm_mha_v2_0x255d60df2b7df3ff3753362954696d0e              _gemm_mha_v2_myl8_454
+      0.066 ms  _gemm_mha_v2_0x255d60df2b7df3ff3753362954696d0e              _gemm_mha_v2_myl8_141
+      0.066 ms  _gemm_mha_v2_0x255d60df2b7df3ff3753362954696d0e              _gemm_mha_v2_myl8_31
+      0.066 ms  _gemm_mha_v2_0x255d60df2b7df3ff3753362954696d0e              _gemm_mha_v2_myl8_158
+      0.066 ms  _gemm_mha_v2_0x255d60df2b7df3ff3753362954696d0e              _gemm_mha_v2_myl8_48
+      0.066 ms  _gemm_mha_v2_0x255d60df2b7df3ff3753362954696d0e              _gemm_mha_v2_myl8_103
+      0.066 ms  _gemm_mha_v2_0x255d60df2b7df3ff3753362954696d0e              _gemm_mha_v2_myl8_543
+      0.066 ms  _gemm_mha_v2_0x255d60df2b7df3ff3753362954696d0e              _gemm_mha_v2_myl8_399
+      0.066 ms  _gemm_mha_v2_0x255d60df2b7df3ff3753362954696d0e              _gemm_mha_v2_myl8_564

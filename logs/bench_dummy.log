@@ -1,0 +1,37 @@
+=== tf3_fp32
+revision/backend: 92ee95c0a4b25fec214da00951ab69e97e207729-trt
+board sizes: 19 (NN buffer 19x19)
+FP16: true
+batch size per thread: 8
+NN server threads: 2
+GPU indices: 0
+timed iterations per thread: 200
+thread 0: 24.8925 ms/batch median, 321.38169 nnEval/s
+thread 1: 24.8859 ms/batch median, 321.46692 nnEval/s
+sum of per-thread median rates: 642.84861 nnEval/s
+wall time of timed region: 5.00129 s
+overall throughput (wall): 639.83503 nnEval/s
+=== tf3_fp8_dummy
+revision/backend: 92ee95c0a4b25fec214da00951ab69e97e207729-trt
+board sizes: 19 (NN buffer 19x19)
+FP16: true
+batch size per thread: 8
+NN server threads: 2
+GPU indices: 0
+timed iterations per thread: 200
+thread 0: 21.2799 ms/batch median, 375.94134 nnEval/s
+thread 1: 21.3053 ms/batch median, 375.49266 nnEval/s
+sum of per-thread median rates: 751.43401 nnEval/s
+wall time of timed region: 4.28637 s
+overall throughput (wall): 746.55296 nnEval/s
+batch=1 tf3_fp32 overall throughput (wall): 533.26657 nnEval/s
+batch=1 tf3_fp8_dummy overall throughput (wall): 486.00829 nnEval/s
+batch=4 tf3_fp32 overall throughput (wall): 649.21557 nnEval/s
+batch=4 tf3_fp8_dummy overall throughput (wall): 750.75233 nnEval/s
+batch=16 tf3_fp32 overall throughput (wall): 541.5622 nnEval/s
+batch=16 tf3_fp8_dummy overall throughput (wall): 643.33095 nnEval/s
+batch=32 tf3_fp32 overall throughput (wall): 485.02621 nnEval/s
+batch=32 tf3_fp8_dummy overall throughput (wall): 556.86509 nnEval/s
+batch=4 int8 overall throughput (wall): 858.18224 nnEval/s
+batch=8 int8 overall throughput (wall): 868.00134 nnEval/s
+batch=16 int8 overall throughput (wall): 711.14716 nnEval/s

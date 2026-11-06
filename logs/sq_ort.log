@@ -1,0 +1,9 @@
+held-out positions: 96
+int8_all_a0.5.onnx               winrateErr avg 5.580% p99 26.647%  policyKL avg 0.028224 p99 0.251253  top1 agree 90.6%  scoreRawErr avg 0.0205
+int8_all_a0.65.onnx              winrateErr avg 2.793% p99 12.438%  policyKL avg 0.009099 p99 0.057922  top1 agree 97.9%  scoreRawErr avg 0.0109
+int8_all_a0.8.onnx               winrateErr avg 2.479% p99 12.876%  policyKL avg 0.005255 p99 0.024506  top1 agree 97.9%  scoreRawErr avg 0.0089
+int8_aonly_nonbt_a0.65.onnx      winrateErr avg 1.802% p99 15.065%  policyKL avg 0.004740 p99 0.034195  top1 agree 97.9%  scoreRawErr avg 0.0061
+int8_noffn2_nosmooth.onnx        winrateErr avg 3.421% p99 16.947%  policyKL avg 0.008634 p99 0.049956  top1 agree 91.7%  scoreRawErr avg 0.0108
+int8_nonbt_a0.5.onnx             winrateErr avg 3.188% p99 13.557%  policyKL avg 0.013963 p99 0.079852  top1 agree 96.9%  scoreRawErr avg 0.0104
+int8_nonbt_a0.65.onnx            winrateErr avg 2.291% p99 18.145%  policyKL avg 0.005077 p99 0.031794  top1 agree 100.0%  scoreRawErr avg 0.0068
+int8_nonbt_a0.8.onnx             winrateErr avg 1.581% p99 5.700%  policyKL avg 0.003123 p99 0.022103  top1 agree 96.9%  scoreRawErr avg 0.0054
